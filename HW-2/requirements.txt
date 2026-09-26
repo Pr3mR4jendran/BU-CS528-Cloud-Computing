@@ -1,0 +1,2 @@
+# Only the optional --download-mode transfer needs this package.
+google-cloud-storage==3.15.0
