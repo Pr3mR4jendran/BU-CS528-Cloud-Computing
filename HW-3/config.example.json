@@ -1,0 +1,19 @@
+{
+  "projectId": "bu-cs528-prem-project",
+  "projectNumber": "637448377303",
+  "region": "us-central1",
+  "bucketName": "cs528-hw3-bu-cs528-prem-project-1791250771",
+  "objectPrefix": "pages/",
+  "numFiles": 12000,
+  "maxFileIndex": 11999,
+  "serviceAccountEmail": "cs528-hw3-services@bu-cs528-prem-project.iam.gserviceaccount.com",
+  "topicName": "cs528-hw3-forbidden",
+  "topicPath": "projects/bu-cs528-prem-project/topics/cs528-hw3-forbidden",
+  "subscriptionName": "cs528-hw3-local",
+  "subscriptionPath": "projects/bu-cs528-prem-project/subscriptions/cs528-hw3-local",
+  "auditObject": "hw3-logs/forbidden-requests.jsonl",
+  "functionName": "cs528-hw3-files",
+  "provisioningAccount": "premraj@bu.edu",
+  "serviceUri": "https://cs528-hw3-files-euoyishtva-uc.a.run.app",
+  "buildServiceAccountEmail": "cs528-hw3-build@bu-cs528-prem-project.iam.gserviceaccount.com"
+}
