@@ -1,0 +1,39 @@
+{
+  "source": "assets/screenshots/billing.png",
+  "sha256": "9ea1e919682470aa33257046faea247b6a28df45a957d5f07edcc0dbc9e8a901",
+  "displayed_date_range": {
+    "from": "2026-10-11",
+    "to": "2026-10-13"
+  },
+  "currency_symbol": "$",
+  "currency_code": null,
+  "displayed_total": "0.04",
+  "displayed_savings": "0.00",
+  "assignment_cost_excluding_alert": "0.03",
+  "excluded_billing_alert_cost": "0.01",
+  "attribution_source": "Account owner confirmed all charges except the Cloud Run billing-alert function belong to the assignment",
+  "services": [
+    {
+      "service": "Networking",
+      "usage_cost": "0.03",
+      "subtotal": "0.03",
+      "assignment": true
+    },
+    {
+      "service": "Cloud Run Functions",
+      "usage_cost": "0.01",
+      "subtotal": "0.01",
+      "assignment": false
+    },
+    {
+      "service": "Compute Engine",
+      "usage_cost": "0.00",
+      "subtotal": "0.00",
+      "assignment": true
+    }
+  ],
+  "project_filter_visible": false,
+  "sku_filter_visible": false,
+  "stress_test_only_cost_established": false,
+  "forecast_panel_used_as_actual_cost": false
+}

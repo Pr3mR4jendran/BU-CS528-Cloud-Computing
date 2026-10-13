@@ -1,6 +1,8 @@
 # Billing screenshots and exports for the HW4 report
 
-The report's implementation, stress results and automatic cleanup are verified. The actual billed cost still needs the evidence below. All measured deployment activity took place on October 13, 2026: deployment state was created at 06:28:26 UTC (02:28:26 EDT), the final stress suite ran 15:56:36-16:09:22 UTC (11:56:36-12:09:22 EDT), and resource absence was verified at 16:40:19 UTC (12:40:19 EDT). Infrastructure was deleted during the first cleanup; the final verification retry did not recreate it.
+The saved `screenshots/billing.png` shows a $0.04 filtered total for October 11-13, 2026: Networking $0.03, Cloud Run Functions $0.01, and Compute Engine $0.00. The account owner confirmed that the Cloud Run Functions charge is the separate billing-alert function and that the other charges belong to this assignment. The report therefore records $0.03 in assignment costs, excluding the alert. The checklist below is optional additional evidence for visible filters and unrounded amounts.
+
+All measured HW4 deployment activity took place on October 13, 2026: deployment state was created at 06:28:26 UTC (02:28:26 EDT), the final stress suite ran 15:56:36-16:09:22 UTC (11:56:36-12:09:22 EDT), and resource absence was verified at 16:40:19 UTC (12:40:19 EDT). Infrastructure was deleted during the first cleanup; the final verification retry did not recreate it.
 
 1. Open Google Cloud Console, select `bu-cs528-prem-project`, then **Billing > Reports** for its linked billing account.
 2. Set **Time range** to **Charge period** (formerly **Usage date**) with a custom range of **October 13, 2026 through October 13, 2026**. Set the **Projects** filter to `bu-cs528-prem-project`. Leave services unrestricted for the overall cost view. Preserve credits/savings in the net-cost view and show the currency.
@@ -12,6 +14,6 @@ The report's implementation, stress results and automatic cleanup are verified. 
 
 Google says cost details are typically available within a day but sometimes take more than 24 hours. If the October 13 view is zero or incomplete today, capture it as provisional and refresh after data settles; do not conclude the assignment cost zero from an empty current-day view. A rounded `$0.00` can also conceal a small amount: the CSV includes an unrounded subtotal.
 
-Once the screenshots and CSVs are saved, the cost section can be updated with a supported amount and any attribution limits. Do not restart the deleted VMs to obtain Billing evidence.
+Additional filtered screenshots and CSVs can refine the cost section with unrounded amounts and narrower time/resource attribution. Do not restart the deleted VMs to obtain Billing evidence.
 
 Source: [Google Cloud: Analyze billing data and cost trends with Reports](https://docs.cloud.google.com/billing/docs/how-to/reports), especially CSV download, cost columns, data availability and reporting delays.

@@ -53,11 +53,6 @@ October 13, 2026
 
 \textbf{Course repository:} \url{https://github.com/Pr3mR4jendran/BU-CS528-Cloud-Computing}
 
-\textbf{Submission status.} Implementation, functional evidence, the full stress experiment,
-and automatic cleanup are verified. The HW-4 folder is prepared for the course repository;
-publishing the local commits and recording the actual billed cost remain before submission.
-Section~\ref{sec:cost} records the cost evidence still needed.
-
 \section{Architecture and configuration}
 The HW3 file service is recreated as a threaded Python HTTP server on a small Compute
 Engine VM. GET uses the URL path and POST uses the request payload to select an existing
@@ -411,8 +406,7 @@ records timeouts explicitly and resynchronizes without suppressing a failure sig
 
 \newreportpage{Automatic deletion and final verification}
 \label{sec:cleanup}
-The instructor clarified that deletion must be available automatically. The same deployment
-driver supplies that option:
+The deployment driver provides an automatic cleanup action:
 \begin{lstlisting}
 & .\.venv\Scripts\python.exe .\deploy.py collect
 & .\.venv\Scripts\python.exe .\deploy.py down
@@ -453,59 +447,43 @@ The original bucket/dataset, earlier homework resources, enabled project APIs, p
 audit logs, SSH credentials and local evidence are shared or retained prerequisites.
 They are intentionally preserved. \code{state.json} records \code{status=deleted}.
 
-\shot{instructor-automatic-deletion.png}{1}{Instructor clarification requiring an automatic VM deletion option. The implemented \code{down} action provides that option and verifies its result.}
 A fresh \code{up} can provision from code, but a post-cleanup delete/recreate cloud experiment
 was not performed and is not claimed here. Read the new state URL on any subsequent run.
 
-\newreportpage{Cost accounting and submission artifacts}
+\newreportpage{Cost accounting}
 \label{sec:cost}
-\textbf{Actual billed cost: awaiting Cloud Billing evidence.} The retained records contain
-deployment and cleanup timestamps but no Billing export. An actual money amount cannot be
-derived reliably from resource metrics or a zero currently displayed before billing settles.
-The cost requirement remains incomplete until the filtered Billing report is recorded.
+The saved Cloud Billing Reports view covers \textbf{October 11--13, 2026}. The cost
+attributed to this assignment is \textbf{\$0.03}, comprising the Networking and Compute
+Engine rows below. The \$0.01 Cloud Run Functions charge belongs to the separate billing-alert
+function and is excluded. The screenshot's \$0.04 filtered total includes that alert.
+Displayed savings are \$0.00.
 
-\begin{tabularx}{\linewidth}{@{}p{2.35in}YY@{}}\toprule
-Event (October 13, 2026) & UTC & America/New\_York \\ \midrule
-Deployment state created & 06:28:26 & 02:28:26 EDT \\
-Services / client ready & 06:49:12 & 02:49:12 EDT \\
-Final stress window & 15:56:36--16:09:22 & 11:56:36--12:09:22 EDT \\
-First cleanup began & 16:29:22 & 12:29:22 EDT \\
-Cleanup absence verified & 16:40:19 & 12:40:19 EDT \\
-Additional absence checks & 16:41:52 & 12:41:52 EDT \\
+\begin{tabularx}{\linewidth}{@{}Yrr@{}}\toprule
+Service & Usage cost & Subtotal \\ \midrule
+Networking & \$0.03 & \$0.03 \\
+Compute Engine & \$0.00 & \$0.00 \\
+\midrule
+Assignment total (excluding billing alert) & \$0.03 & \$0.03 \\
 \bottomrule\end{tabularx}
-State timestamps bound the workflow; VM creation/deletion records and Billing determine
-actual billable time. The later verification retry did not recreate or extend the life
-of resources already removed in the first cleanup.
 
-To finish cost reporting, select the project's Billing Reports view for October 13,
-group by Service and then SKU, and save the chart/table, currency, usage charges, credits
-and net subtotal. Include Compute VM usage, disks, external IPv4, network transfer and
-the API/storage services represented in the report. Download the corresponding CSVs.
-The experiment shares a project and dataset with earlier homework: label-filtered
-\code{assignment=cs528-hw4} usage can help attribute labeled resources, but may omit
-unlabeled/shared charges. Report project-day totals and clearly explain any HW4 allocation
-instead of silently equating the whole project bill with the stress test alone.
+\shot{billing.png}{1}{Saved Billing Reports view for October 11--13, 2026: service costs and the filtered total of \$0.04. The adjacent forecast panel is not used as actual cost evidence.}
 
-Google states that costs typically appear within a day but sometimes take more than
-24 hours. Record the capture time and distinguish usage charges before credits from the
-net amount paid after credits. Documentation:
+The billing-alert function is separate from the assignment. Excluding its \$0.01 charge
+from the displayed \$0.04 leaves \$0.03 for Networking and Compute Engine, which belong
+to this assignment. This represents costs in the saved October
+11--13 view, rather than a separately metered cost of the final 13-minute stress suite.
+The Compute Engine value is reported at the screenshot's displayed precision.
+
+The HW4 deployment state was created at 06:28:26 UTC (02:28:26 EDT) on October 13;
+services/client were ready at 06:49:12 UTC. The final stress window was
+15:56:36--16:09:22 UTC (11:56:36--12:09:22 EDT). Cleanup absence was verified at
+16:40:19 UTC (12:40:19 EDT). The verification retry did not recreate resources already
+deleted by the first cleanup.
+
+These are observed Billing values rather than an estimate derived from resource metrics.
+Service/SKU CSV exports would provide unrounded amounts. Billing details can arrive after
+usage; Google states that reporting sometimes takes more than 24 hours. Documentation:
 \url{https://docs.cloud.google.com/billing/docs/how-to/reports}.
-The local \code{BILLING-EVIDENCE.md} provides the capture checklist.
-
-\subsection*{Code and report package}
-The local course-repository \code{HW-4} folder contains both services, the deployment/cleanup
-driver, demo/client/stress tools, pinned requirements, portable example configuration,
-tests, run guides and this report's source/assets/PDF. The intended publication location is:
-\url{https://github.com/Pr3mR4jendran/BU-CS528-Cloud-Computing/tree/main/HW-4}.
-Local commits still need to be pushed before that location can be used for grading.
-The instructor binary, actual config/state, virtual environment and full raw evidence
-are retained locally and excluded from the public source folder. Report evidence summaries
-and the selected screenshots/plots are included with the report.
-
-The full stress record contains command logs, raw server/client metrics, compact client
-output, completion status, summary JSON/CSV and graph files. \code{MANIFEST.sha256} verifies
-the archived experiment files. Pre-cleanup verification ties the stress denials to cloud
-logs/stdout/audit, and post-cleanup verification records resource absence.
 
 \appendix
 \newreportpage{Pub/Sub and project IAM evidence}
@@ -534,7 +512,7 @@ Pre-cleanup collection & \nolinkurl{collect-20261013T161443335686Z}: full logs/j
 Cleanup recovery & \nolinkurl{down-20261013T163845931615Z}: no remaining resources/failures; additional absence/grant checks \\
 Local code checks & All 33 HTTP, audit, deployment and stress-accounting tests passed \\
 Screenshots & VM/static-IP/identities; conditional bucket IAM; Pub/Sub/project roles; service startup; curl/browser/logs; reporter correlation \\
-Billing & No actual billed-cost export available when this report was generated \\
+Billing & Saved October 11--13 view: \$0.03 assignment cost after excluding the \$0.01 billing-alert function \\
 \bottomrule\end{tabularx}
 \normalsize
 The code package includes compact verification summaries under \code{report/evidence}.
