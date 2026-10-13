@@ -1,0 +1,17 @@
+{
+  "projectId": "YOUR_PROJECT_ID",
+  "account": "YOUR_GOOGLE_ACCOUNT_EMAIL",
+  "bucketName": "YOUR_EXISTING_DATASET_BUCKET",
+  "objectPrefix": "pages/",
+  "maxFileIndex": 11999,
+  "region": "us-central1",
+  "zone": "us-central1-a",
+  "prefix": "cs528-hw4",
+  "serverMachine": "f1-micro",
+  "clientMachine": "e2-micro",
+  "clientImageFamily": "ubuntu-2404-lts-amd64",
+  "clientImageProject": "ubuntu-os-cloud",
+  "reporterMachine": "e2-micro",
+  "port": 8080,
+  "httpSourceRanges": ["0.0.0.0/0"]
+}
