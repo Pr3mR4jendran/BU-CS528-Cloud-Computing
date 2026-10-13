@@ -1,0 +1,17 @@
+{
+  "verifiedAt": "2026-10-13T16:18:02.094110+00:00",
+  "cloud_folder": "C:\\Users\\premr\\Desktop\\BU Coursework\\Fall 2026\\CS 528 - Cloud Computing\\Assignments\\HW-4\\evidence\\collect-20261013T161443335686Z",
+  "stress_folder": "C:\\Users\\premr\\Desktop\\BU Coursework\\Fall 2026\\CS 528 - Cloud Computing\\Assignments\\HW-4\\evidence\\stress-20261013T155600814186Z",
+  "tracked_owned_resources": 15,
+  "cloud_log_entries_exported": 1833,
+  "audit_events_exported": 1783,
+  "stress_expected_denials": 1119,
+  "stress_denials_in_audit": 1119,
+  "stress_denials_in_critical_logs": 1119,
+  "stress_denials_in_reporter_stdout": 1119,
+  "runtime_bucket_and_pubsub_iam_verified": true,
+  "server_storage_condition": "resource.name.startsWith('projects/_/buckets/cs528-hw3-bu-cs528-prem-project-1791250771/objects/pages/')",
+  "reporter_storage_condition": "resource.name.startsWith('projects/_/buckets/cs528-hw3-bu-cs528-prem-project-1791250771/objects/hw4-logs/rf6136407ec914afdbeb03a8733430b0b/')",
+  "cloud_evidence_preserved": true,
+  "resources_deleted": false
+}
