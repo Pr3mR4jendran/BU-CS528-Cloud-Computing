@@ -1,0 +1,22 @@
+{
+  "projectId": "bu-cs528-prem-project",
+  "region": "us-central1",
+  "zone": "us-central1-a",
+  "prefix": "cs528-hw5",
+  "sqlInstance": "cs528-hw5-sql",
+  "sqlTier": "db-f1-micro",
+  "sqlStorageGb": 10,
+  "sqlZones": ["us-central1-a", "us-central1-b", "us-central1-c", "us-central1-f"],
+  "databaseName": "hw5",
+  "databaseUser": "hw5_app",
+  "bucketName": "cs528-hw3-bu-cs528-prem-project-1791250771",
+  "objectPrefix": "pages/",
+  "maxFileIndex": 11999,
+  "port": 8080,
+  "serverMachine": "e2-small",
+  "reporterMachine": "e2-micro",
+  "clientMachine": "e2-small",
+  "httpSourceRanges": ["0.0.0.0/0"],
+  "runId": "development",
+  "workloadPeerIps": []
+}

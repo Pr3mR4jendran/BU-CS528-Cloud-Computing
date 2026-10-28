@@ -1,0 +1,8 @@
+google-cloud-storage==3.16.0
+google-cloud-pubsub==2.42.0
+google-cloud-logging==3.17.0
+google-cloud-secret-manager==2.31.0
+cloud-sql-python-connector[pymysql]==1.23.0
+# 1.2.3 fails the full caching_sha2_password auth path used by Cloud SQL.
+PyMySQL==1.2.0
+SQLAlchemy==2.1.6
