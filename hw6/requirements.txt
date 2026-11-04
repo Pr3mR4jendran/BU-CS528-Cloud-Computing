@@ -1,0 +1,5 @@
+# VM input and output. The models and snapshot mode use the Python standard library.
+cloud-sql-python-connector[pymysql]==1.23.0
+PyMySQL==1.2.0
+google-cloud-secret-manager==2.31.0
+google-cloud-storage==3.16.0
